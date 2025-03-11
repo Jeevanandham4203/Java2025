@@ -10,9 +10,9 @@ public class CountCharacter {
 	/*	List<Character>ch=Arrays.asList('M','J','E','E','V','A');
 		Long counting=ch.stream().count();
 		System.out.println("The given Character counting is:"+counting);*/
-		String s="jeevan";
-		Long ch=s.chars().mapToObj(c->(char)c).collect(Collectors.counting());
-		System.out.println(ch);
+		String a="jeeva";
+		Long collect = a.chars().mapToObj(c->(char)c).collect(Collectors.counting());
+		System.out.println(collect);
 
 	}
 

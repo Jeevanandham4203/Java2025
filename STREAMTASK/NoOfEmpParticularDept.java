@@ -11,7 +11,7 @@ public class NoOfEmpParticularDept {
 
 	public static void main(String[] args) {
 		Emp emp1=new Emp("IT", "Jeeva",40000,23);
-		Emp emp2=new Emp("IT", "karthik",45000,30);
+		Emp emp2=new Emp("IT", "karthik",45000,3);
 		Emp emp3=new Emp("IT", "poovu",43000,27);
 		Emp emp4=new Emp("IT", "manoj",40000,24);
 		Emp emp5=new Emp("NON-IT", "Thiru",25000,23);
@@ -22,15 +22,16 @@ public class NoOfEmpParticularDept {
 		Long count=emp.stream().filter(x->x.getDept()=="NON-IT").count();
 		System.out.println("Number of Emp in IT Dept: "+count);
 		
-		Optional<String>sorting=emp.stream()
+		String sorting=emp.stream()
 				.filter(x->x.getSalary()>=25000)
 				.sorted(Comparator.comparing(Emp::getName).reversed())
+				.sorted(Comparator.comparing(Emp::getAge).reversed())
 				.map(x->x.getName()+""+x.getAge())
-				.findFirst();
-		System.out.println(sorting.orElse(null));
+				.findFirst().get();
+		System.out.println(sorting);
 
 	}
-
+ 
 }
 
 class Emp {

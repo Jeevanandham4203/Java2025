@@ -11,9 +11,13 @@ public class FindingDuplicate {
 	public static void main(String[] args) {
 		List<Integer>li=Arrays.asList(10,20,30,10,25,25);
 		Set<Integer>duplicate=new HashSet<>();
-		List<Integer>DuplicateValue=li.stream()
-				.filter(x->!duplicate.add(x))
-				.distinct().collect(Collectors.toList());
-		System.out.println(DuplicateValue);
+		//List<Integer> collect = li.stream().filter(x->!duplicate.add(x)).distinct().collect(Collectors.toList());
+		//System.out.println(collect);
+		//finding original value
+		Set<Integer> collect = li.stream().collect(Collectors.toSet());
+		System.out.println(collect);
+		//<>hetro=Arrays.asList("jeeva",10);
+		
 	}
 }
+

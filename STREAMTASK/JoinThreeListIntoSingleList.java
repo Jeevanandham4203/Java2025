@@ -13,8 +13,6 @@ public class JoinThreeListIntoSingleList {
 		List<List<Integer>>lis=Arrays.asList(li1,li2,li3);
 		List<Integer>join=lis.stream().flatMap(x->x.stream()).collect(Collectors.toList());
 		System.out.println(join);
-		System.out.println(lis);
-		
 				
 
 	}

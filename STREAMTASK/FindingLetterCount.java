@@ -8,8 +8,8 @@ public class FindingLetterCount {
 
 	public static void main(String[] args) {
 		String a="I am coding";
-		Long lettercount=a.chars().filter(Character::isLetter).count();
-		System.out.println(lettercount);
+		long count = a.chars().filter(Character::isLetter).count();
+		System.out.println(count);
 
 	}
 
